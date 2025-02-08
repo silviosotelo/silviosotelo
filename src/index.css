@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  h1 {
+    @apply text-[2.75rem] leading-[3.25rem] font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-[2rem] leading-[2.5rem] font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-[1.5rem] leading-[2rem] font-semibold;
+  }
+
+  p {
+    @apply text-[1rem] leading-[1.75rem];
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 px-6 lg:px-8;
+  }
+
+  .container-width {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] 
+           transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] 
+           hover:translate-y-[-4px];
+  }
+
+  .button-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 
+           bg-primary-600 hover:bg-primary-700 
+           text-white font-medium rounded-lg
+           transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-200
+           focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+           transition-all duration-200;
+  }
+
+  .tag {
+    @apply px-3 py-1 text-sm font-medium rounded-full
+           bg-primary-100 text-primary-800;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
