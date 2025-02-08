@@ -9,10 +9,10 @@ const Hero = () => {
         <div className="text-center animate-fade-up">
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r 
                        from-primary-600 to-primary-800 mb-6">
-            Your Name
+            Silvio Sotelo
           </h1>
           <p className="text-[1.5rem] leading-[2rem] text-gray-600 mb-8">
-            Full Stack Developer
+            Full Stack Developer & Oracle APEX Specialist
           </p>
           <p className="text-[1.125rem] leading-[1.75rem] text-gray-600 max-w-2xl mx-auto mb-12">
             Passionate about creating elegant solutions to complex problems. 
